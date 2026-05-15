@@ -45,3 +45,41 @@ MUSLO_MASA    = 1.5
 ESPINILLA_ANCHO = 10  # anchura de la espinilla
 ESPINILLA_ALTO  = 38  # longitud de la espinilla
 ESPINILLA_MASA  = 1.0
+
+# MOTORES #
+MOTOR_FUERZA_MAX  = 800000   # fuerza máxima que aplican los motores
+MOTOR_RATE_MAX    = 8.0      # velocidad máxima del motor (rad/s)
+
+# POSICIÓN INICIAL DE LA CRIATURA #
+X_INICIO_CRIATURA = 200      # posición X de inicio (lejos del borde izq)
+
+# LÍMITES ANGULARES DE LAS ARTICULACIONES #
+LIMITE_MUSLO_RAD      = 1.22   # ±70° en radianes (math.pi * 70/180)
+LIMITE_ESPINILLA_MIN  = 0.0    # 0° (espinilla no va hacia arriba)
+LIMITE_ESPINILLA_MAX  = 2.27   # 130° en radianes
+
+# RED NEURONAL #
+ENTRADAS      = 10       # sensores de la criatura
+CAPAS_OCULTAS = [16, 8]  # capas ocultas
+SALIDAS       = 4        # un motor por articulación
+
+# ALGORITMO GENÉTICO #
+TAMANO_POBLACION      = 20     # número de criaturas por generación
+
+TASA_MUTACION         = 0.18   # probabilidad inicial de mutar cada peso
+TASA_MUTACION_MIN     = 0.04   # mínimo de tasa de mutación
+TASA_MUTACION_DECAY   = 0.97   # factor de reducción por generación exitosa
+MAGNITUD_MUTACION     = 0.40   # magnitud inicial de perturbación gaussiana
+MAGNITUD_MUTACION_MIN = 0.06   # magnitud mínima
+
+ELITISMO              = 3      # top-N que pasan sin cambios
+PORCENTAJE_PADRES     = 0.50   # porcentaje de población que puede ser padre
+PORCENTAJE_ALEATORIOS = 0.10   # porcentaje de individuos aleatorios por gen
+
+# SIMULACIÓN #
+DURACION_SIMULACION = 1200     # frames máximos por criatura (a 60 FPS = 20 s)
+MAX_GENERACIONES    = 0        # 0 = sin límite
+
+# VISUALIZACIÓN #
+GRAFICA_GENS    = 60           # generaciones visibles en la gráfica
+MOSTRAR_GRAFICA = True
